@@ -29,10 +29,10 @@ ins2 = $(genTypedQuery [qq|
    |] ) =<< open "test.db"
 
 ins3 = let
-       s = "test string scoped" :: String
+       s = "test string scoped"
     in $(genTypedQuery [qq|
      INSERT INTO 
-         test ( str -- < s
+         test ( str -- String -- < s
               )
    |] ) =<< open "test.db"
 
