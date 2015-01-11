@@ -10,6 +10,9 @@ env:
 
 matrix:
   allow_failures:
+     # direct-sqlite fixed in upstream
+   - env: GHCVER=7.4.2 CABALVER=1.18
+    # happy is not smiling for haskell-src-ext
    - env: GHCVER=7.8.4 CABALVER=1.18
    - env: GHCVER=7.10.1 CABALVER=1.22
    - env: GHCVER=head  CABALVER=head
